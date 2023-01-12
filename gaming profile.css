@@ -1,0 +1,206 @@
+:root {
+    --primary-color: #009688;
+    --secondary-color: #607d8b;
+    --third-color: #e91e63;
+}
+
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    padding: 20px 0;
+}
+
+/* ----------------------------------------- */
+
+.section {
+    width: 800px;
+    padding: 8px 14px;
+    background-color: #dbd7d7;
+    position: relative;
+    margin: 0 auto;
+}
+
+.information {
+    display: flex;
+    position: relative;
+}
+
+.information::after {
+    content: "140 days in the ship";
+    position: absolute;
+    bottom: 4px;
+    right: 4px;
+    color: #aaa;
+}
+
+.information .part-1 {
+    width: 30%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 6px;
+    gap: 8px;
+    border-right: 1px solid #d9d9d9;
+    background-color: white;
+}
+
+.information .part-2 {
+    width: 70%;
+    padding: 6px 10px;
+    text-align: justify;
+    background-color: white;
+    position: relative;
+
+}
+
+.part-1 .pic {
+    width: 150px;
+    height: 120px;
+}
+
+.part-1 .pic img {
+    width: 100%;
+    clip-path: circle();
+}
+
+.part-1 .lvl {
+    font-weight: bold;
+    font-size: 18px;
+}
+
+.part-1 .progress {
+    width: 200px;
+    height: 16px;
+    background-image: linear-gradient(to right, var(--primary-color) 70%, #eee 70% 100%);
+    border-radius: 8px;
+}
+
+.part-1 .statue span {
+    color: var(--primary-color);
+    font-weight: bold;
+}
+
+/* ===================================================== */
+
+.points-log {
+    background-color: white;
+    padding: 6px;
+}
+
+.points-log div:first-child {
+    background-color: var(--secondary-color);
+    width: fit-content;
+    padding: 6px;
+    font-size: 20px;
+    color: white;
+    font-weight: bold;
+}
+
+.nmb {
+    color: var(--primary-color);
+    font-weight: bold;
+}
+
+.qst {
+    color: var(--third-color);
+    font-weight: bold;
+}
+
+.points-log p {
+    padding: 8px 0;
+    border-bottom: 1px solid #eee;
+}
+
+.points-log p:nth-child(4) {
+    border: initial;
+}
+
+/* ========================================================= */
+
+.trophies {
+    background-color: white;
+    padding: 6px;
+}
+
+.trophies div:first-child {
+    background-color: var(--secondary-color);
+    width: fit-content;
+    padding: 6px;
+    font-size: 20px;
+    color: white;
+    font-weight: bold;
+}
+
+.trophies .trophies-img {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    row-gap: 3px;
+    margin: 8px 0;
+}
+
+/* ========================================================= */
+
+.rank {
+    background-color: white;
+    padding: 6px;
+}
+
+.rank div:first-child {
+    background-color: var(--secondary-color);
+    width: fit-content;
+    padding: 6px;
+    font-size: 20px;
+    color: white;
+    font-weight: bold;
+}
+
+.rank div:nth-child(2) {
+    margin: 8px 0;
+}
+
+/* ========================================================= */
+
+.power {
+    background-color: white;
+    padding: 6px;
+}
+
+.power div:first-child {
+    background-color: var(--secondary-color);
+    width: fit-content;
+    padding: 6px;
+    font-size: 20px;
+    color: white;
+    font-weight: bold;
+}
+
+.power div:nth-child(2),
+.power div:nth-child(3),
+.power div:nth-child(4),
+.power div:nth-child(5),
+.power div:nth-child(6),
+.power div:nth-child(7) {
+    margin: 8px 0;
+    padding: 8px 0;
+    border-bottom: 1px solid #eee;
+    display: flex;
+    justify-content: space-between;
+}
+
+.power div:nth-child(2) p:nth-child(2),
+.power div:nth-child(3) p:nth-child(2),
+.power div:nth-child(5) p:nth-child(2),
+.power div:nth-child(7) p:nth-child(2) {
+    color: green;
+    font-weight: bold;
+}
+
+.power div:nth-child(4) p:nth-child(2),
+.power div:nth-child(6) p:nth-child(2) {
+    color: red;
+    font-weight: bold;
+}

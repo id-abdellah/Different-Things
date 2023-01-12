@@ -1,0 +1,237 @@
+* {
+    box-sizing: border-box;
+    font-family: 'Josefin Sans', sans-serif;
+    color: white;
+    user-select: none;
+}
+
+body {
+    margin: 0;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.wrapper {
+    width: 1000px;
+    display: flex;
+    /* justify-content: space-between; */
+    gap: 2px;
+    min-height: 500px;
+}
+
+.wrapper>div {
+    background-color: black;
+    width: calc(100% / 4);
+    display: flex;
+    flex-direction: column;
+}
+
+.up {
+    flex-basis: 35%;
+    position: relative;
+    background-color: #242424;
+    border-bottom: 1px solid #393939;
+    border-right: 1px solid #393939;
+}
+
+.up div {
+    /* width: fit-content; */
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 25px;
+    font-weight: bold;
+}
+
+.up div p:has(sub) sub {
+    font-weight: normal;
+    position: relative;
+    bottom: 5px;
+}
+
+
+
+
+.features {
+    flex-basis: calc(100% - 60%);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    /* align-items: center; */
+}
+
+.features div {
+    font-weight: 400;
+    text-align: center;
+    padding: 17px;
+    margin: 0;
+    border-bottom: 1px solid #393939;
+    border-right: 1px solid #393939;
+    font-size: 14px;
+    color: lightgray;
+}
+
+.features div:nth-child(odd) {
+    background-color: #242424;
+}
+
+.features div:nth-child(even) {
+    background-color: #2a2a2a;
+}
+
+
+.order {
+    flex-basis: 25%;
+    background-color: #242424;
+    border: 1px solid #393939;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.order button {
+    background-color: #242424;
+    font-size: 17px;
+    font-weight: 300;
+    padding: 10px 20px;
+    border: 1.5px solid #747474;
+    cursor: pointer;
+}
+
+.order button:hover {
+    filter: brightness(80%);
+}
+
+.order button:active {
+    transform: scale(0.95);
+}
+
+
+
+
+
+/* =================hove effects====================== */
+
+.pricing-four,
+.pricing-three,
+.pricing-two,
+.pricing-one {
+    transition-duration: .5s;
+}
+
+
+
+
+
+.pricing-one:hover {
+    transform: scale(1.1);
+    margin-right: 12px;
+}
+
+.pricing-one:hover .up {
+    background-color: rgb(190, 10, 10);
+    border: none;
+}
+
+.pricing-one:hover .features div {
+    background-color: rgb(190, 10, 10);
+    border: 1px solid transparent;
+}
+
+.pricing-one:hover .order {
+    background-color: rgb(190, 10, 10);
+    border: 1px solid transparent;
+}
+
+.pricing-one:hover .order button {
+    background-color: rgb(190, 10, 10);
+    border: 1px solid white;
+}
+
+
+/* --------------------------------- */
+
+.pricing-two:hover {
+    transform: scale(1.1);
+    margin-right: 12.1px;
+    margin-left: 12px;
+}
+
+.pricing-two:hover .up {
+    background-color: rgb(190, 10, 10);
+    border: none;
+}
+
+.pricing-two:hover .features div {
+    background-color: rgb(190, 10, 10);
+    border: 1px solid transparent;
+}
+
+.pricing-two:hover .order {
+    background-color: rgb(190, 10, 10);
+    border: 1px solid transparent;
+}
+
+.pricing-two:hover .order button {
+    background-color: rgb(190, 10, 10);
+    border: 1px solid white;
+}
+
+/* ------------------------------------ */
+
+.pricing-three:hover {
+    transform: scale(1.1);
+    margin-right: 12.1px;
+    margin-left: 12px;
+}
+
+.pricing-three:hover .up {
+    background-color: rgb(190, 10, 10);
+    border: none;
+}
+
+.pricing-three:hover .features div {
+    background-color: rgb(190, 10, 10);
+    border: 1px solid transparent;
+}
+
+.pricing-three:hover .order {
+    background-color: rgb(190, 10, 10);
+    border: 1px solid transparent;
+}
+
+.pricing-three:hover .order button {
+    background-color: rgb(190, 10, 10);
+    border: 1px solid white;
+}
+
+/* ------------------------------------------- */
+
+.pricing-four:hover {
+    transform: scale(1.1);
+    margin-right: 12.1px;
+    margin-left: 12px;
+}
+
+.pricing-four:hover .up {
+    background-color: rgb(190, 10, 10);
+    border: none;
+}
+
+.pricing-four:hover .features div {
+    background-color: rgb(190, 10, 10);
+    border: 1px solid transparent;
+}
+
+.pricing-four:hover .order {
+    background-color: rgb(190, 10, 10);
+    border: 1px solid transparent;
+}
+
+.pricing-four:hover .order button {
+    background-color: rgb(190, 10, 10);
+    border: 1px solid white;
+}

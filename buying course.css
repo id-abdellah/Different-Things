@@ -1,0 +1,276 @@
+* {
+    box-sizing: border-box;
+    font-family: 'PT Serif', serif;
+}
+
+body {
+    margin: 0;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #51509b;
+}
+
+.wrapper {
+    width: 900px;
+    padding: 30px 60px;
+}
+
+.wrapper h2 {
+    color: white;
+    font-size: 25px;
+    font-weight: 600;
+    margin-bottom: 0;
+}
+
+.wrapper h2::after {
+    content: "🌹";
+    margin-left: 4px;
+}
+
+.wrapper .intro {
+    /* padding-top: 0px; */
+    margin-top: 4px;
+    color: white;
+    font-size: 12px;
+}
+
+
+
+.boxes-offers .offer-one {
+    width: 400px;
+    background-color: white;
+    padding: 20px 40px 20px;
+    border-radius: 8px;
+    box-shadow: 0px 0px 6px;
+    z-index: 3;
+}
+
+.boxes-offers .offer-one h4 {
+    font-size: 25px;
+    font-weight: 500;
+    padding: 0;
+    margin: 6px 0px 0px 40px;
+    position: relative;
+    transform-style: preserve-3d;
+}
+
+.offer-one h4::before {
+    content: url(https://img.icons8.com/parakeet/2x/star.png);
+    position: absolute;
+    top: -35px;
+    left: -70px;
+    transform: scale(.26);
+}
+
+.offer-one h4::after {
+    content: "";
+    position: absolute;
+    width: 71%;
+    height: 8px;
+    background-color: #ffeabe;
+    bottom: 3px;
+    left: 0;
+
+    /* to set pseudo element below its parent
+        + you should set "transfomr-style="preserve-3d" in the parent"
+    */
+    transform: translateZ(-1px);
+}
+
+.feature-container {
+    margin-top: 30px;
+    width: 98%;
+}
+
+.feature-container .features {
+    font-size: 12px;
+    margin-top: 10px;
+    border-bottom: 1px solid #eee;
+    padding-bottom: 15px;
+}
+
+.buying-1 {
+    display: flex;
+    align-items: center;
+    /* gap: 180px; */
+    padding: 0;
+}
+
+.buying-1 .price {
+    font-size: 40px;
+    font-weight: bold;
+    padding: 0;
+    margin: -5px 0 0 10px;
+    color: #4a5568;
+    position: relative;
+}
+
+.buying-1 .price::before {
+    content: "$";
+    position: absolute;
+    font-size: 16px;
+    top: 6px;
+    left: -8px;
+}
+
+.buying-1 .price::after {
+    content: "USD";
+    position: absolute;
+    font-size: 14px;
+    right: -28px;
+    bottom: 6px;
+}
+
+.buying-1 button {
+    width: 90px;
+    height: 30px;
+    padding: 20px 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: none;
+    background-color: #e5af40;
+    color: white;
+    font-weight: bold;
+    border-radius: 4px;
+    margin-left: 100px;
+}
+
+.offer-one p:last-child:has(a) {
+    font-size: 12px;
+
+}
+
+.offer-one p:last-child:has(a) a {
+    font-size: 12px;
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+}
+
+
+/*  */
+
+
+.offer-two {
+    width: 350px;
+    background-color: white;
+    padding: 20px 40px 20px;
+    border-radius: 0px 8px 8px 0;
+    box-shadow: 0px 0px 6px;
+
+}
+
+.offer-two h4 {
+    font-size: 25px;
+    font-weight: 500;
+    padding: 0;
+    margin: 6px 0px 0px 40px;
+    position: relative;
+    transform-style: preserve-3d;
+}
+
+.offer-two h4::before {
+    content: url(https://img.icons8.com/ios-filled/2x/checkmark.png);
+    position: absolute;
+    top: -35px;
+    left: -70px;
+    transform: scale(.3);
+}
+
+.offer-two h4::after {
+    content: "";
+    position: absolute;
+    width: 85%;
+    height: 8px;
+    background-color: #ffeabe;
+    bottom: 3px;
+    left: 0;
+
+    /* to set pseudo element below its parent
+        + you should set "transfomr-style="preserve-3d" in the parent"
+    */
+    transform: translateZ(-1px);
+}
+
+
+.feature-container-2 {
+    margin-top: 30px;
+    width: 95%;
+}
+
+.feature-container-2 .features-2 {
+    font-size: 12px;
+    margin-top: 10px;
+    border-bottom: 1px solid #eee;
+    padding-bottom: 15px;
+}
+
+
+.buying-2 {
+    display: flex;
+    align-items: center;
+    /* gap: 180px; */
+    padding: 0;
+}
+
+.buying-2 .pricing {
+    font-size: 40px;
+    font-weight: bold;
+    padding: 0;
+    margin: -5px 0 0 10px;
+    color: #4a5568;
+    position: relative;
+}
+
+.buying-2 .pricing::before {
+    content: "$";
+    position: absolute;
+    font-size: 16px;
+    top: 6px;
+    left: -8px;
+}
+
+.buying-2 .pricing::after {
+    content: "USD";
+    position: absolute;
+    font-size: 14px;
+    right: -28px;
+    bottom: 6px;
+}
+
+.buying-2 button {
+    width: 90px;
+    height: 30px;
+    padding: 20px 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: none;
+    background-color: #e5af40;
+    color: white;
+    font-weight: bold;
+    border-radius: 4px;
+    margin-left: 100px;
+}
+
+/* =============================================== */
+
+.boxes-offers {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    margin-top: 30px;
+}
+
+button:hover {
+    cursor: pointer;
+    filter: contrast(80%);
+    transform: scale(1.01);
+}
+
+button:active {
+    transform: scale(0.99);
+}

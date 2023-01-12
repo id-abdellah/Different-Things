@@ -1,0 +1,347 @@
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    font-family: 'Josefin Sans', sans-serif;
+}
+
+.wrapper {
+    width: 100%;
+    min-height: 100vh;
+    display: grid;
+    grid-template-columns: 4fr 1fr;
+    grid-template-areas: "path path" "banner sidebare" "controle sidebare" "produc sidebare";
+    grid-template-rows: min-content 200px 60px min-content;
+    gap: 10px;
+
+    padding: 0 20px;
+}
+
+
+.path {
+    grid-area: path;
+    padding: 6px 0 0 0;
+}
+
+.path a {
+    color: black;
+    text-decoration: none;
+}
+
+.path a:active {
+    color: #6ed5fe;
+}
+
+.banner {
+    grid-area: banner;
+    background-image: linear-gradient(to right, #b96eff, #6ed5fe);
+    position: relative;
+    overflow: hidden;
+}
+
+.banner::after {
+    content: "Sale up to 60% Accessories";
+    position: absolute;
+    width: 230px;
+    text-align: center;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 30px;
+    color: white;
+}
+
+.banner img:nth-child(1) {
+    position: absolute;
+    transform: scale(1.2);
+    right: 50px;
+    top: -120px;
+}
+
+.banner img:nth-child(2) {
+    position: absolute;
+    top: -13px;
+    left: 63px;
+    width: 240px;
+    height: 240px;
+    transform: skewy(-2deg);
+}
+
+
+
+
+
+
+.sidebare {
+    grid-area: sidebare;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    /* background-color: green; */
+}
+
+.laptop,
+.color {
+    padding: 18px 15px;
+    box-shadow: 0px 0px 3px 0px black;
+    /* margin-bottom: 8px; */
+}
+
+.laptop a {
+    color: black;
+    text-decoration: none;
+}
+
+ul li:hover a {
+    text-decoration: underline;
+}
+
+.laptop h5,
+.color h5 {
+    font-size: 20px;
+    font-weight: 400;
+    margin-bottom: 10px;
+}
+
+.laptop .title {
+    text-decoration: none;
+    color: black;
+    letter-spacing: 2px;
+}
+
+.laptop ul {
+    list-style: none;
+    transform: translateX(20px);
+    display: none;
+}
+
+.laptop .category:hover ul {
+    display: block;
+}
+
+.laptop .category {
+    margin: 20px 0 20px 0;
+}
+
+
+.color {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    min-height: 180px;
+}
+
+.color button {
+    width: 100px;
+    display: flex;
+    background-color: white;
+    border: none;
+}
+
+.color button:nth-child(1) i {
+    color: gray;
+}
+
+.color button:nth-child(2) i {
+    color: blue;
+}
+
+.color button:nth-child(3) i {
+    color: black;
+}
+
+.color button:nth-child(4) i {
+    color: #c19a6b;
+}
+
+.color button:nth-child(5) i {
+    color: orange;
+}
+
+.buttons button {
+    /* margin: 6px 0; */
+    padding: 6px 0;
+    cursor: pointer;
+}
+
+.buttons button:hover {
+    filter: brightness(80%);
+}
+
+.buttons button:active {
+    transform: scale(.98);
+}
+
+.buttons button i {
+    padding: 0 6px;
+}
+
+
+
+
+
+
+
+
+
+
+
+.controle {
+    grid-area: controle;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #f2f2f2;
+    padding: 0 10px;
+}
+
+.controle div:nth-child(1) {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.controle div:nth-child(1) button {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    border: none;
+    cursor: pointer;
+    background-color: #c2c2c2;
+}
+
+i {
+    color: #fefcf9;
+}
+
+.controle div:nth-child(1) button:hover {
+    filter: brightness(80%);
+}
+
+.controle div:nth-child(1) button:active {
+    background-color: black;
+}
+
+.controle div:nth-child(1) p {
+    font-size: 12px;
+}
+
+.controle div:nth-child(2) {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+label {
+    font-size: 15px;
+}
+
+select {
+    border: none;
+    outline: none;
+}
+
+
+.produc {
+    grid-area: produc;
+    display: flex;
+    /* background-color: yellow; */
+    height: min-content;
+}
+
+.produc .joystik {
+    width: 30%;
+    /* background-color: red; */
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+.produc .joystik::after {
+    content: "-12%";
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    background-color: #e52e06;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 13px;
+    color: white;
+    top: 10px;
+    right: 10px;
+}
+
+.produc .joystik img {
+    width: 100%;
+    transform: scale(.8);
+}
+
+.produc .information {
+    width: 70%;
+    /* background-color: #6ed5fe; */
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    /* gap: 10px; */
+}
+
+.information .rating i {
+    color: gold;
+    font-size: 12px;
+}
+
+.information .rating+p {
+    font-weight: 700;
+}
+
+.information .rating+p+p {
+    font-weight: 400;
+    font-size: 12px;
+}
+
+.information .price {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.information .price del {
+    font-weight: bold;
+    font-size: 12px;
+    color: gray;
+}
+
+.information .price p {
+    font-weight: bold;
+    color: red;
+}
+
+.information .description p {
+    font-weight: 500;
+    text-align: justify;
+    font-size: 14px;
+}
+
+.information .actions button {
+    width: 30px;
+    height: 30px;
+    border: none;
+    background-color: white;
+    box-shadow: 0px 0px 1px 0px black;
+    cursor: pointer;
+}
+
+.actions button i {
+    color: black;
+}
+
+.actions button:hover {
+    filter: brightness(80%);
+}
+
+.actions button:active {
+    transform: scale(.96);
+}

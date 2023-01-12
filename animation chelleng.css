@@ -1,0 +1,145 @@
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+.e,
+.l {
+    font-size: 500px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    position: relative;
+}
+
+.e::after {
+    content: "";
+    position: absolute;
+    width: 38px;
+    height: 38px;
+    background-color: lightblue;
+    top: 127px;
+    left: 190px;
+    animation-name: letterE;
+    animation-timing-function: linear;
+    animation-duration: 7s;
+    /* animation-iteration-count: infinite; */
+    animation-delay: 3s;
+    animation-fill-mode: forwards;
+
+    opacity: 0;
+}
+
+.l::after {
+    content: "";
+    position: absolute;
+    width: 40px;
+    height: 38px;
+    background-color: lightblue;
+    top: 424px;
+    left: 197px;
+    animation-name: letterL;
+    animation-duration: 3s;
+    animation-timing-function: linear;
+    animation-fill-mode: forwards;
+    /* animation-iteration-count: infinite; */
+}
+
+/* for after pseudo element */
+@keyframes letterL {
+    50% {
+        left: 42px;
+        top: 424px;
+        opacity: 1;
+    }
+
+    90% {
+        left: 42px;
+        top: 128px;
+        opacity: 1;
+    }
+
+    94% {
+        left: 42px;
+        top: 128px;
+        opacity: 0.6;
+    }
+
+    96% {
+        left: 42px;
+        top: 128px;
+        opacity: 0, 4;
+    }
+
+    98% {
+        left: 42px;
+        top: 128px;
+        opacity: 0.2;
+    }
+
+    100% {
+        left: 42px;
+        top: 128px;
+        opacity: 0;
+    }
+}
+
+/* for e pseudo element */
+@keyframes letterE {
+    0% {
+        opacity: 0.5;
+    }
+
+    11% {
+        left: 43px;
+        top: 127px;
+        opacity: 1;
+    }
+
+    22% {
+        left: 43px;
+        top: 274px;
+        opacity: 1;
+    }
+
+    33% {
+        left: 185px;
+        top: 274px;
+        opacity: 1;
+    }
+
+    44% {
+        left: 43px;
+        top: 274px;
+        opacity: 1;
+    }
+
+    55% {
+        left: 43px;
+        top: 424px;
+        opacity: 1;
+    }
+
+    66% {
+        left: 194px;
+        top: 424px;
+        opacity: 1;
+    }
+
+    77% {
+        left: 43px;
+        top: 424px;
+        opacity: 1;
+    }
+
+    88% {
+        left: 43px;
+        top: 127px;
+        opacity: 1;
+    }
+
+    100% {
+        top: 127px;
+        left: 190px;
+        opacity: 1;
+    }
+}

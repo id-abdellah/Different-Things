@@ -1,0 +1,138 @@
+* {
+    box-sizing: border-box;
+    font-family: 'Josefin Sans', sans-serif;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #1f1f1e;
+}
+
+.wrapper {
+    width: 300px;
+    height: 400px;
+    background-color: #ffffff;
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    justify-content: space-between;
+    /* align-items: center; */
+    border-radius: 6px;
+}
+
+.wrapper .imgs {
+    height: 100px;
+    position: relative;
+}
+
+.imgs img:nth-child(1) {
+    width: 100%;
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+    height: 150%;
+    position: relative;
+    top: -20px;
+}
+
+.imgs img:nth-child(2) {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translatex(-50%) translateY(100%);
+    width: 60px;
+    clip-path: circle();
+}
+
+.bio {
+    margin: 30px auto;
+    display: flex;
+    flex-direction: column;
+
+}
+
+.bio p:nth-child(1) {
+    text-align: center;
+    font-weight: bold;
+    font-size: 24px;
+    margin-bottom: 0;
+}
+
+.bio p:nth-child(2) {
+    margin-top: 10px;
+    text-align: center;
+}
+
+.bio button {
+    align-self: center;
+    background-color: white;
+    border: 1px solid #f60275;
+    padding: 5px 25px;
+    margin-top: 8px;
+    cursor: pointer;
+}
+
+.numbers {
+    margin-top: -20px;
+    display: flex;
+    justify-content: space-around;
+    font-size: 20px;
+}
+
+.numbers div {
+    position: relative;
+}
+
+.numbers .followers::after {
+    content: "Followers";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -210%);
+    font-size: 13px;
+}
+
+.numbers .following::after {
+    content: "Following";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -210%);
+    font-size: 13px;
+}
+
+.numbers .videos::after {
+    content: "Videos";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -210%);
+    font-size: 13px;
+}
+
+.view {
+    border: none;
+    background-color: #f60275;
+    padding: 15px 0;
+    position: relative;
+    bottom: -1px;
+    cursor: pointer;
+}
+
+.view:hover {
+    filter: brightness(80%);
+}
+
+.follow:hover {
+    background-color: #c5025e;
+}
+
+.view:active,
+.follow:active {
+    transform: scale(1.04);
+}

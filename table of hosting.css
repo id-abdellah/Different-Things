@@ -1,0 +1,97 @@
+* {
+    box-sizing: border-box;
+    font-family: 'Josefin Sans', sans-serif;
+}
+
+table {
+    border-collapse: collapse;
+}
+
+th,
+td {
+    padding: 30px 70px;
+    border-right: 1px solid #eeeeee;
+    text-align: center;
+}
+
+td {
+    padding: 20px 70px !important;
+    position: relative;
+}
+
+tr td:nth-child(1) {
+    color: #a6a6a6;
+    /* font-weight: bold; */
+}
+
+th {
+    color: white;
+    font-weight: normal;
+}
+
+tr:nth-child(odd) {
+    background-color: #fafafa;
+}
+
+tr:nth-child(even) {
+    background-color: #f7f7f7;
+}
+
+thead th {
+    background-color: #fc5103;
+}
+
+tr:nth-of-type(1) td:nth-child(2),
+tr:nth-of-type(1) td:nth-child(3),
+tr:nth-of-type(1) td:nth-child(4),
+tr:nth-of-type(1) td:nth-child(5) {
+    color: #fc5103;
+    font-size: 50px;
+}
+
+sub {
+    all: initial;
+    position: absolute;
+    bottom: 30px;
+    font-size: 12px;
+    color: #aaaaaf;
+    font-family: 'Josefin Sans', sans-serif;
+}
+
+tr:nth-of-type(1) td:nth-child(2)::after,
+tr:nth-of-type(1) td:nth-child(3)::after,
+tr:nth-of-type(1) td:nth-child(4)::after,
+tr:nth-of-type(1) td:nth-child(5)::after {
+    content: "99";
+    position: absolute;
+    font-size: 16px;
+    color: black;
+}
+
+tr:nth-of-type(1) td:nth-child(2)::before,
+tr:nth-of-type(1) td:nth-child(3)::before,
+tr:nth-of-type(1) td:nth-child(4)::before,
+tr:nth-of-type(1) td:nth-child(5)::before {
+    content: "$";
+    position: absolute;
+    font-size: 16px;
+    color: black;
+    transform: translatex(-130%);
+}
+
+button {
+    border: none;
+    background-color: black;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: rgb(46, 44, 44);
+}
+
+button:active {
+    transform: scale(0.9);
+}
